@@ -1,0 +1,8 @@
+snapshots:
+  - name: snap_hosts
+    relation: source('staging', 'hosts')
+    config:
+      schema: snapshots
+      unique_key: host_id
+      strategy: check
+      check_cols: [is_superhost, response_rate]

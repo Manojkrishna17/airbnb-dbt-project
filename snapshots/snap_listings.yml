@@ -1,0 +1,8 @@
+snapshots:
+  - name: snap_listings
+    relation: source('staging', 'listings')
+    config:
+      schema: snapshots
+      unique_key: listing_id
+      strategy: check
+      check_cols: [price_per_night, bedrooms, bathrooms]

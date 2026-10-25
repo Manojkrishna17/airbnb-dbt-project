@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: obt_bookings
+    columns:
+      - name: booking_id
+        data_tests: [unique, not_null]
+
+  - name: revenue_by_city
+    columns:
+      - name: city
+        data_tests: [not_null]
+
+  - name: cancelled_bookings
+    columns:
+      - name: booking_id
+        data_tests: [unique, not_null]

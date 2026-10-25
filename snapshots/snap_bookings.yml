@@ -1,0 +1,8 @@
+snapshots:
+  - name: snap_bookings
+    relation: source('staging', 'bookings')
+    config:
+      schema: snapshots
+      unique_key: booking_id
+      strategy: check
+      check_cols: [booking_status, nights_booked, booking_amount]
